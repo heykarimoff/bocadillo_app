@@ -1,3 +1,4 @@
+import os
 from bocadillo import App
 
 app = App()
@@ -7,4 +8,4 @@ async def index(req, res):
     res.text = "Hello, world!"
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=os.environ.get("PORT"))
