@@ -8,4 +8,5 @@ async def index(req, res):
     res.text = "Hello, world!"
 
 if __name__ == "__main__":
-    app.run(port=os.environ.get("PORT"))
+    print(os.environ.get("PORT"))
+    app.run()
